@@ -5,6 +5,6 @@ import java.time.LocalDateTime;
 public class TimerUtils {
     public static boolean canClaim(LocalDateTime lastClaim) {
         Duration duration = Duration.between(lastClaim, LocalDateTime.now());
-        return duration.toHours() >= 1;
+        return duration.toMinuete() >= 1;
     }
 }
