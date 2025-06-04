@@ -1,15 +1,14 @@
 ```java
-package app;
-
-import utils.TimerUtils;
+import core.RewardManager;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        if (TimerUtils.isEligible()) {
-            System.out.println("✅ You've received your 200 voucher!");
-            TimerUtils.saveLastClaimTime();
-        } else {
-            System.out.println("⏳ You must wait before claiming again.");
-        }
-    }
-}
+        Scanner scanner = new Scanner(System.in);
+        RewardManager manager = new RewardManager();
+
+        System.out.print("Enter your network (MTN/Vodacom/Telkom/Cell C): ");
+        String network = scanner.nextLine().trim();
+
+        String reward = manager.claimReward(network);
+       
