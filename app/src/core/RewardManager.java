@@ -1,4 +1,4 @@
-```java
+java
 package core;
 
 import utils.TimerUtils;
@@ -8,7 +8,7 @@ public class RewardManager {
     private long lastClaimTime = 0;
 
     public boolean canClaim() {
-        return TimerUtils.isOneHourPassed(lastClaimTime);
+        return TimerUtils.isMinuetePassed(lastClaimTime);
     }
 
     public String generateVoucherCode() {
@@ -36,28 +36,3 @@ public class RewardManager {
         }
     }
 }
-```
-
----
-
-*3. Main.java*  
-`app/src/Main.java`
-
-```java
-import core.RewardManager;
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        RewardManager manager = new RewardManager();
-
-        System.out.print("Enter your network (MTN/Vodacom/Telkom/Cell C): ");
-        String network = scanner.nextLine().trim();
-
-        String reward = manager.claimReward(network);
-        System.out.println("\n=== Your Reward ===");
-        System.out.println(reward);
-    }
-}
-```
