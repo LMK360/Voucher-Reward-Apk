@@ -1,4 +1,4 @@
-```java
+java
 import core.RewardManager;
 import java.util.Scanner;
 
