@@ -1,6 +1,6 @@
 xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yourdomain.yourapp">
+    package="LMK.AGENT002.LIFESTYLE">
 
     <application
         android:label="VoucherRewardApp"
