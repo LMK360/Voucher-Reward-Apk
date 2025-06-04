@@ -1,3 +1,2 @@
 gradle
-rootProject.name = "VoucherRewardApp"
-include ':app'
+include ':App'
