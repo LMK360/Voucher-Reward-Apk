@@ -1,0 +1,5 @@
+bash
+mkdir -p gradle/wrapper
+wget https://services.gradle.org/distributions/gradle-8.4-all.zip
+unzip gradle-8.4-all.zip
+cp gradle-8.4/lib/gradle-wrapper.jar gradle/wrapper/
